@@ -19,6 +19,10 @@ public class Human implements Serializable, TreeNode<Human> {
     private List<Human> children;
     private Human spouse;
 
+//дефолтный конструктор без аргументов без всего для билдера
+    public Human(){
+
+    }
 //    public Human(String name, Genger genger, LocalDate birthDay, LocalDate deathDate,
 //                 Human mother, Human father) {
 //        //человек ещё ни где
@@ -40,9 +44,6 @@ public class Human implements Serializable, TreeNode<Human> {
 //        this(name, genger,  birthDay, null,  mother,  father);
 //    }
 //
-//    public Human() {
-//
-//    }
 
     public boolean addChildren(Human child){
         //contains - входит ли в список значение
@@ -100,6 +101,7 @@ public class Human implements Serializable, TreeNode<Human> {
     public void setId(long id) {
         this.id = id;
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -220,6 +222,16 @@ public class Human implements Serializable, TreeNode<Human> {
         }
         return sb.toString();
     }
+//
+//    @Override
+//    public String toString() {
+//        return "Student{" +
+//                "id=" + id +
+//                ", name='" + name + '\'' +
+//                ", age=" + l +
+//                '}';
+//    }
+
 
     @Override
     public boolean equals(Object o) {

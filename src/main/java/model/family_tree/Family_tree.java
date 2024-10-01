@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Family_tree<E extends TreeNode<E>> implements Serializable, Iterable<Human> {
+public class Family_tree<E extends TreeNode<E>> implements Serializable, Iterable<E> {
     private long humansId;
     private List<E> familyTree;
 
@@ -92,7 +92,7 @@ public class Family_tree<E extends TreeNode<E>> implements Serializable, Iterabl
     }
 
     @Override
-    public Iterator<Human> iterator() {
+    public Iterator<E> iterator() {
         return new FamilyTreeIterator(familyTree);
     }
 //
